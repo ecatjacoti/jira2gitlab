@@ -1,3 +1,4 @@
 import_status.pickle
 __pycache__
 jira2gitlab_secrets.py
+venv/*

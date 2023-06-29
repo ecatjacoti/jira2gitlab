@@ -337,7 +337,7 @@ def migrate_user(jira_username):
         )
         gl_user.raise_for_status()
     except requests.exceptions.RequestException as e:
-        raise Exception(f"Unable to create {jira_username} in Gitlab!\n{e}")
+        raise Exception(f"Unable to create {jira_username}, {jira_user['emailAddress']} ,{jira_user['displayName']} in Gitlab!\n{e}")
     gl_user = gl_user.json()
 
     if MAKE_USERS_TEMPORARILY_ADMINS:
@@ -500,6 +500,7 @@ def migrate_project(jira_project, gitlab_project):
 
         # Epic name to label
         if JIRA_EPIC_FIELD in issue['fields'] and issue['fields'][JIRA_EPIC_FIELD]:
+            print(f"issue['fields'][JIRA_EPIC_FIELD]= {issue['fields'][JIRA_EPIC_FIELD]} ... ")
             epic_info = requests.get(
                 f"{JIRA_API}/issue/{issue['fields'][JIRA_EPIC_FIELD]['id']}/?fields=summary",
                 auth = HTTPBasicAuth(*JIRA_ACCOUNT),

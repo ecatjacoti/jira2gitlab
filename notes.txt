@@ -1,0 +1,26 @@
+
+10105 Acceptance criteria
+11502 App SW Version
+10700 Approvals 
+10102 Approved by
+10705 Approvers
+10500 Associated CAPA
+11110 Baseline end date
+11109 Baseline start date
+11501 Board SW Version
+10309 Business Value
+10200 Change Approved By
+10504 Corrective/Preventive
+11201 Current location
+10701 Customer Request Type	
+10900 Development	
+11200 Device type
+10505 Effectiveness Check Date
+11108 End date
+10305 Epic Color
+10301 Epic Link
+10304 Epic Name
+10303 Epic Status
+10307 Epic/Theme
+10306 Flagged
+10101 Implemented by

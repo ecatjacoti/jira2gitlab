@@ -1,10 +1,11 @@
 import requests
+import urllib3
 import urllib.parse
 
 from jira2gitlab_secrets import *
 from jira2gitlab_config import *
 
-
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning) 
 def get_project_id(project_path):
     project = requests.get(
         f"{GITLAB_API}/projects/{urllib.parse.quote(project_path, safe='')}",
